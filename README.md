@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Bidirectional TCP bridge, port forwarding, ║
+ORelay is a TCP socket bridge and relay suite. It provides a bidirectional TCP relay with port forwarding, multi-client and single-shot modes, and IPv4/IPv6 dual-stack support. It includes live traffic inspection, session logging and protocol detection.
 
 ---
 
 ## ✨ Features
 
-- Bidirectional TCP bridge and relay suite with live hex inspector, session stats and multi-client mode
+- Bidirectional TCP relay (socat-style) with a configurable bind address and port
+- Multi-client listener and single-shot modes with IPv4/IPv6 dual-stack support
+- Live packet hex/ASCII inspection with regex and keyword filtering
+- Per-session byte counters and a live bandwidth (BPS) meter with throttling
+- Session log export in TXT, JSON, PCAP-lite and CSV formats
+- Protocol detection (HTTP, SSH, TLS, FTP, MySQL, Redis and more) with auto-reconnect
 
 ---
 
@@ -39,6 +44,7 @@ Bidirectional TCP bridge, port forwarding, ║
 
 ```bash
 ./ORelay
+./ORelay --help
 ```
 
 ---
